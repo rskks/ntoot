@@ -92,31 +92,15 @@ p{
 .sidebar a:hover{
     text-decoration:none;
 }
-
 .mobile-menu{
     display: none;
 }
 
 /* layout */
 .sidebar{
-    width: 150px;
-    position: fixed;
-    bottom:0;
-    top:0;
-    background: lightsalmon;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display:none;
 }
 
-.main-right{
-    left: 150px;
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 150px);
-}
 #pp-nav span{
     top:2px;
     left:2px;
@@ -159,6 +143,13 @@ p{
     padding-bottom: 15px;
 }
 
+#project-sec .container{
+    grid-auto-rows: 2;
+}
+
+.button {
+    font-family: 'Sora', sans-serif;
+}
 /* Testimony */
 .card{
     border:none;
