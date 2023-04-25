@@ -13,13 +13,19 @@ html{
 h1{
     font-size:2.5rem;
     margin-bottom:12px;
+    font-family: 'Sora', sans-serif;
 }
 h3{
     font-size: 1.5rem;
+    font-family: 'Sora', sans-serif;
+}
+p{
+    font-family: 'Sora', sans-serif;
 }
 .btn-prime{
     background: olivedrab !important;
     font-weight: bold;
+    font-family: 'Sora', sans-serif;
     color:aliceblue;
 }
 
@@ -31,7 +37,7 @@ h3{
     content: attr(data-icon);
     padding: 5px;
     display:inline-block;
-  }
+}
   
 
 
@@ -60,6 +66,7 @@ h3{
     height: 100px;
     line-height: 100px;
     font-weight: bold;
+    font-family: 'Sora', sans-serif;
 }
 
 .sidebar ul{
@@ -84,6 +91,10 @@ h3{
 }
 .sidebar a:hover{
     text-decoration:none;
+}
+
+.mobile-menu{
+    display: none;
 }
 
 /* layout */
@@ -154,12 +165,97 @@ h3{
     margin:0 5px;
 }
 .card-img-top{
-    width:150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     object-fit: cover;
     margin:10px auto;
 }
 .card-body{
     text-align: center;
+}
+
+/* Contact */
+.contact-form h1{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    color: black;
+}
+.contact-form .btnContact{
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding:1.5%;
+    background: olivedrab;
+    font-weight: 600;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: 'Sora', sans-serif;
+}
+.form-group{
+    padding: 15px 0;
+}
+input[type="text"]{
+    padding: 20px 10px;
+}
+
+/* mediaqueries */
+@media only screen and (max-width:400px){
+    .sidebar{
+        display: none;
+    }
+    .main-right{
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .content-box{
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .overlay{
+        position: fixed;
+        right:-60%;
+        height:100vh;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        transition: .5s all;
+    }
+    .mob-active{
+        left: 0;
+    }
+    .burger{
+        position: absolute;
+        z-index: 9999;
+        right: 20px;
+        top: 20px;
+    }
+    .mobile-menu ul{
+        height: inherit;
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-menu li{
+        border-bottom: 1px solid grey;
+    }
+    .mobile-menu a{
+        font-size: 10px;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px;
+    }
+    .ball{
+        display: none;
+    }
 }
