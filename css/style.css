@@ -141,15 +141,27 @@ p{
 #project-sec .card-wrapper{
     padding-top: 15px;
     padding-bottom: 15px;
+    flex: 0 0 auto;
+    margin-right: 10px;
+
 }
 
-#project-sec .container{
-    grid-auto-rows: 2;
-}
-
-.button {
+#project-sec .button {
     font-family: 'Sora', sans-serif;
 }
+.projects-gallery {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .filter-container {
+    display: inline-flex;
+  }
+  
+  .filtr-item {
+    margin-right: 16px; /* Add some space between gallery items */
+  }
+
 /* Testimony */
 .card{
     border:none;

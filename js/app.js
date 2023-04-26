@@ -1,12 +1,11 @@
 $(document).ready(function() {
-    $('#pagepiling').pagepiling({
-        menu:null,
-        direction:'vertical',
-        sectionsColor: ['#F3E2B7','antiquewhite','white','antiquewhite','aliceblue'],
-        anchors:['home-sec','about-sec','project-sec','testimony-sec','contact-sec'],
-        menu:'#myMenu',
-        scrollingSpeed:700,
-        easing:'swing'
+    $('#fullpage').fullpage({
+        sectionsColor: ['white','antiquewhite','white','antiquewhite','aliceblue'],
+        anchors:['home','abt','project','testimony','contact'],
+        menu:'#myMenu2',
+        easing:'swing',
+        scrollingSpeed: 751,
+        touchSensitivity: 10,
     });
 
     // filterizr
@@ -15,8 +14,7 @@ $(document).ready(function() {
         animationDuration: .5,
         layout: 'packed',
         grid: {
-          rows: 0, // auto-calculate number of rows based on items count
-          columns: 5 // number of columns
+          rows: 2, // auto-calculate number of rows based on items count // number of columns
         }
     });
 
