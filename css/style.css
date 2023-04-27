@@ -53,6 +53,9 @@ html, body {
     max-width: 100%;
 }
 
+.icon-hidden{
+    opacity: 0;
+}
 
 
 

@@ -1,13 +1,27 @@
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        sectionsColor: ['white','antiquewhite','white','antiquewhite','aliceblue'],
+        sectionsColor: ['white','white','white','antiquewhite','aliceblue'],
         anchors:['home','abt','project','testimony','contact'],
         menu:'#myMenu2',
         easing:'swing',
         scrollingSpeed: 751,
         touchSensitivity: 10,
         navigation:true,
+        scrollBar: false,
+        afterLoad: function(origin, destination, direction) {
+            if (destination.anchor == 'abt') {
+                $('.animate__animated').each(function(){
+                    $(this).removeClass('animate__fadeOutDown').addClass('animate__fadeInUp');
+                });
+                $('.iconify').each(function() {
+                    $(this).removeClass('icon-hidden').addClass('animate__animated animate__bounceIn animate__delay-2s');
+                });
+            }
+        }
     });
+
+
 
     // filterizr
 
