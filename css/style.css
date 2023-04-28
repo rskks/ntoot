@@ -172,8 +172,19 @@ html, body {
 #project-sec .button {
     background-color: transparent;
     color: black;
-    border-color: blue;
+    border-color: black;
     font-family: 'Sora', sans-serif;
+}
+
+#project-sec .pressed-down{
+    background-color: black;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    font-family: 'Sora', sans-serif;
+}
+#project-sec .button-outline:hover button{
+    background-color: black;
+    color:aliceblue;
 }
 #project-sec .filter-container {
     width: 5%;
@@ -199,6 +210,10 @@ html, body {
   }
 
 /* Testimony */
+
+.slider{
+    margin: 15px;
+}
 .card{
     border:none;
     margin:0 5px;
@@ -217,30 +232,37 @@ html, body {
 /* Contact */
 .contact-form h1{
     margin-bottom: 8%;
-    margin-top: -10%;
-    color: black;
-    font-family: 'Sora', sans-serif;
-    font-size: 3rem;
 }
-.contact-form .btnContact{
-    width: 50%;
-    border: none;
-    border-radius: 1rem;
-    padding:1.5%;
-    background: olivedrab;
-    font-weight: 600;
-    color: aliceblue;
-    cursor: pointer;
+
+
+.form-control{
+    padding: 5px 0;
     font-family: 'Sora', sans-serif;
-    text-align: center;
-}
-.form-group{
-    padding: 15px 0;
-    font-family: 'Sora', sans-serif;
-    font-size: 3rem;
+    font-size: smaller;
+    height: 110%;
 }
 input[type="text"]{
     padding: 20px 10px;
+}
+.form-control-msg{
+    width: 100%;
+    height:150px;
+    font-size: medium;
+    background-color: white;
+}
+
+#contact-sec .button {
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    font-family: 'Sora', sans-serif;
+}
+
+#contact-sec .pressed-down{
+    background-color: black;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    font-family: 'Sora', sans-serif;
 }
 
 /* mediaqueries */

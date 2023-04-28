@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-        sectionsColor: ['white','white','white','antiquewhite','aliceblue'],
+        sectionsColor: ['white','white','white','aliceblue','white'],
         anchors:['home','abt','project','testimony','contact'],
         menu:'#myMenu2',
         easing:'swing',
@@ -18,8 +18,33 @@ $(document).ready(function() {
                     $(this).removeClass('icon-hidden').addClass('animate__animated animate__bounceIn animate__delay-2s');
                 });
             }
+            else if (destination.anchor == 'project') {
+                $('.button').each(function(){
+                    $(this).removeClass('icon-hidden').addClass('animate__animated animate__bounceIn');
+                });
+                //$('.iconify').each(function() {
+                //    $(this).removeClass('icon-hidden').addClass('animate__animated animate__bounceIn animate__delay-2s');
+                //});
         }
+}});
+
+$(document).ready(function() {
+    // Fullpage initialization code goes here
+    
+    // Add mousedown event listener to buttons
+    $('.button').on('mousedown', function() {
+        // Get the filter value from the data-filter attribute
+        var filterValue = $(this).data('filter');
+        
+        // Add animate classes to the button // Remove the pressed-down class from all buttons except the one that was just clicked
+        $(this).removeClass('animate__animated animate__bounceIn').addClass('animate__animated animate__headShake').addClass('pressed-down');
+        $('.button').not(this).removeClass('pressed-down animate__animated animate__headShake');
+        // Call the filterizr filter function with the selected filter
+        $('.filtr-container').filterizr({ 
+            filter: filterValue 
+        });
     });
+});
 
 
 
