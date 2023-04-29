@@ -42,6 +42,18 @@ p{
 html, body {
     overflow: hidden;
     height: 100%;
+    scrollbar-width: none;
+}
+
+.container{
+    height: 100%;
+    scrollbar-width: none !important;
+    overflow: visible;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    width: 0 !important;
 }
 
 .fp-section {
@@ -119,6 +131,12 @@ html, body {
     border-radius: 50%;
     width: 12px;
     height: 12px;
+}
+/* About */
+#abt-sec .container {
+    overflow: hidden;
+    height: 100%;
+    scrollbar-width: none;
 }
 /*
 #fp-nav span{
@@ -216,20 +234,64 @@ html, body {
 }
 .card{
     border:none;
-    margin:0 5px;
+    margin: 5px;
+    padding: 8px;
+    height: 100%;
+    border-radius: 20px;
 }
 .card-img-top{
     justify-self: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border-radius: 10%;
     object-fit: cover;
     margin:10px auto;
 }
-.card-body{
+.card-name p{
+    display: inline-flex;
+    position: absolute;
+    top:30%;
+    left: 40%;
+    transform: translate(-30%,-40%);
+    font-weight: bold;
+}
+.card-body > .col-12 {
     text-align: center;
+    height: 100%;
+}
+.card-body{
+    position: relative;
+}
+.quote-icon {
+    display: none;
+}
+  
+.test-rating {
+    color: goldenrod;
+    position: absolute;
+    left: 60%;
+    transform: translate(0,-100%);
 }
 
+#testimony-sec .card-text{
+    padding-top: 0;
+}
+.wrapper-slick{
+    margin:0 auto;
+}
+.lead{
+    font-family: 'Sora', sans-serif;
+    font-size: 1.5rem;
+}
+
+#testimony-sec .iconify-icon{
+    vertical-align: middle;
+    font-size: 0.5rem;
+    margin-right: 16px;
+    content: attr(data-icon);
+    padding: 5px;
+    display:inline-block;
+}
 /* Contact */
 .contact-form h1{
     margin-bottom: 8%;
@@ -266,8 +328,21 @@ input[type="text"]{
     font-family: 'Sora', sans-serif;
 }
 
+#contact-sec .img-box{
+    height: 110%;
+    width: 110%;
+}
 /* mediaqueries */
 @media only screen and (max-width:400px){
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0px;
+        background: transparent;
+    }
+    main {
+        overflow: hidden;
+    }      
+
     .sidebar{
         display: none;
     }
