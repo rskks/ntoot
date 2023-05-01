@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
+    $name = $_POST['text'];
     $email = $_POST['email'];
     $message = $_POST['message'];
     $to = 'ras.keks@gmail.com';
