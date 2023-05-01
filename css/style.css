@@ -304,6 +304,7 @@ body::-webkit-scrollbar{
     font-size: smaller;
     height: 110%;
 }
+
 input[type="text"]{
     padding: 20px 10px;
 }
