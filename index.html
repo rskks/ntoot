@@ -2059,9 +2059,10 @@
                                 <div class="row">
                                     <h1> Contact Me </h1>
                                 </div>
-                                <div class="row">
+                                <form method="POST" action="submit-form.php">
+                                    <div class="row">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name: ">
+                                            <input type="text" class="form-control" placeholder="Name: " method="POST" action="submit-form.php">
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control" placeholder="Email:">
@@ -2069,17 +2070,18 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Subject">
                                         </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <textarea name="txtMsg" class="form-control-msg" placeholder="Message: "></textarea>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <input type="submit" class="button button-outline" value="Send Message">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control-msg" placeholder="Message: "></textarea>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <input type="submit" class="button button-outline" value="Send Message">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
