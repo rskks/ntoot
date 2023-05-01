@@ -314,7 +314,9 @@ input[type="text"]{
     font-size: medium;
     background-color: white;
 }
-
+label{
+    font-family: 'Sora', sans-serif;
+}
 #contact-sec .button {
     background-color: transparent;
     color: black;
