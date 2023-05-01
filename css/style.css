@@ -69,7 +69,9 @@ body::-webkit-scrollbar{
     opacity: 0;
 }
 
-
+.grecaptcha-badge{
+    visibility: hidden;
+}
 
 
 
