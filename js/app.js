@@ -69,8 +69,6 @@ var filterizr = $('.filter-container').filterizr({
       rows: 2
     }
   });
-
-  
   
   
 // lightbox
