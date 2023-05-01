@@ -46,8 +46,6 @@ $(document).ready(function() {
     });
 });
 
-
-
     // filterizr
 
  //   var filterizr = $('.filter-container').filterizr({
@@ -72,7 +70,9 @@ var filterizr = $('.filter-container').filterizr({
     }
   });
 
-
+  
+  
+  
 // lightbox
 $(document).ready(function() {
     // Initialize lightbox with only the filtered images
@@ -82,22 +82,25 @@ $(document).ready(function() {
       'alwaysShowNavOnTouchDevices': true,
       'positionFromTop': 50,
       'wrapAround': true
-    });
-      
-    // Filter the lightbox items
-    $('.filter-container').on('filtering.filterizr', function() {
-      var $filteredItems = $lightboxItems.filterizr('getFiltered');
-      $lightboxItems.not($filteredItems).data('lightbox', null);
-      $filteredItems.lightbox({
-        'disableScrolling': true,
-        'alwaysShowNavOnTouchDevices': true,
-        'positionFromTop': 50,
-        'wrapAround': true
-      });
-    });
+    });     
   });
   
-
+  function updateLightboxData() {
+    var filteredItems = filterizr.getFiltered();
+    $.each(filteredItems, function() {
+      $(this).find('a').attr('data-lightbox', '1');
+    });
+    var nonFilteredItems = filterizr.$elements.not(filteredItems);
+    $.each(nonFilteredItems, function() {
+      $(this).find('a').removeAttr('data-lightbox');
+    });
+  }
+  
+  $('.button').on('click', function() {
+    filterizr.filterizr('filter', $(this).data('filter'));
+    updateLightboxData();
+  });
+  
 
       
 
