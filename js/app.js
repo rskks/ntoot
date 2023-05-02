@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 var filterizr = $('.filter-container').filterizr({
     animationDuration: .5,
-    layout: 'packed',
+    layout: 'sameSize',
     grid: {
       rows: 2
     }
