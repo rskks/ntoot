@@ -70,7 +70,11 @@ var filterizr = $('.filter-container').filterizr({
     }
   });
   
-  
+//rewrite lightbox data on filter
+filterizr.on('filteringComplete', function() {
+    updateLightboxData();
+    });
+
 // lightbox
 $(document).ready(function() {
     // Initialize lightbox with only the filtered images
