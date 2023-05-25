@@ -103,7 +103,12 @@ $(document).ready(function() {
     updateLightboxData();
   });
   
-
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6LcCyNIlAAAAAAuE7ueF5zh3A_bt1MkG4Oczq9Kk', {action: 'submit'}).then(function (token) {
+        console.info("got token: " + token);
+        document.getElementById('g-recaptcha-response').value = token;
+    });
+});
       
 
     // Slick slider
