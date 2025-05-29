@@ -73,10 +73,19 @@ body::-webkit-scrollbar{
     visibility: hidden;
 }
 
-
-
-
-
+/* Ghetto loading screen */
+#fadeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
 
 /* Sidebar */
 .logo{
@@ -119,11 +128,84 @@ body::-webkit-scrollbar{
 .mobile-menu{
     display: none;
 }
-
-/* layout */
+ 
 .sidebar{
     display:none;
 }
+/* Menu */
+/* Menu container */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 9999;
+    display: block;
+    justify-content: center; /* centers #menu */
+    align-items: center;
+    background: transparent;
+    pointer-events: auto;
+}
+
+/* Menu list */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+    flex: 1; /* equally distributes width */
+    text-align: center;
+}
+
+
+/* Menu links */
+#menu li a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    border-radius: 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Hover underline */
+#menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+#menu li a:hover::after {
+    background-color: #000;
+}
+
+/* Active item */
+#menu li.active a,
+#menu li.active a:hover {
+    color: #fff;
+}
+
+#menu li.active a::after {
+    background-color: #fff;
+}
+
 
 #fp-nav ul li a span {
     background-color: #fff;
@@ -131,11 +213,12 @@ body::-webkit-scrollbar{
     border-radius: 50%;
 }
 /* About */
-#abt-sec .container {
+#about-sec .container {
     overflow: hidden;
     height: 100%;
     scrollbar-width: none;
 }
+
 /*
 #fp-nav span{
     top:2px;

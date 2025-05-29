@@ -55,24 +55,17 @@
     </script>
     </head>
     <body>
-        <div class="sidebar">
-            <ul id="myMenu">
-                <li data-menuanchor="home" class="active">
-                    <a href="#home-sec">Home</a>
-                </li>
-                <li data-menuanchor="about" class="active">
-                    <a href="#about-sec">About</a>
-                </li>
-                <li data-menuanchor="project" class="active">
-                    <a href="#project-sec">Art</a>
-                </li>
-                <li data-menuanchor="testimony" class="active">
-                    <a href="#testimony-sec">Reviews</a>
-                </li>
-                <li data-menuanchor="contact" class="active">
-                    <a href="#contact-sec">Contact Me</a>
-                </li>
-            </ul>
+        <div id="fadeOverlay"></div>
+        <div class="menu">
+            <div class="overlay">
+                <ul id="menu">
+                    <li><a class="nav_item nav_home active" href="#home/home1">Home</a></li>
+                    <li><a class="nav_item nav_about" href="#home/abt">About</a></li>
+                    <li data-menuanchor="project"><a class="nav_item" href="#project">Art</a></li>
+                    <li><a class="nav_item nav_testimony" href="#home/testimony-sec">Reviews</a></li>
+                    <li data-menuanchor="contact"><a class="nav_item" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </div>
         <div class="mobile-menu">
             <div class="burger">
@@ -101,6 +94,7 @@
         <main class="main-right">
             <div id="fullpage">
                 <div class="section" id="home-sec">
+                    <div class="slide" data-anchor="home1">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
@@ -123,411 +117,41 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- about section-->
-                <div class="section" id="about-sec">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="about-left">
-                                    <img src="images/2022-07-27_00-03-56_UTC.jpg" 
-                                    srcset="images/2022-07-27_00-03-56_UTC-256.jpeg 256w,
-                                    images/2022-07-27_00-03-56_UTC-535.jpeg 535w,
-                                    images/2022-07-27_00-03-56_UTC-850.jpeg 850w,
-                                    images/2022-07-27_00-03-56_UTC.jpg 1080w,
-                                    images/2022-07-27_00-03-56_UTC-1260.jpeg 1260w,
-                                    images/2022-07-27_00-03-56_UTC-1420.jpeg 1420w" class="img-fluid" alt="About image">
+                    </div>
+                    <!-- about section-->
+                        <div class="slide hide-on-responsive" data-anchor="abt-sec" id="about-sec">
+                            <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about-left" id="aboutImage">
+                                        <img src="images/2022-07-27_00-03-56_UTC.jpg" 
+                                        srcset="images/2022-07-27_00-03-56_UTC-256.jpeg 256w,
+                                        images/2022-07-27_00-03-56_UTC-535.jpeg 535w,
+                                        images/2022-07-27_00-03-56_UTC-850.jpeg 850w,
+                                        images/2022-07-27_00-03-56_UTC.jpg 1080w,
+                                        images/2022-07-27_00-03-56_UTC-1260.jpeg 1260w,
+                                        images/2022-07-27_00-03-56_UTC-1420.jpeg 1420w" class="img-fluid" alt="About image">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h1 class="mb4">About Me</h1>
-                                <p class="animate__animated animate__fadeOutDown" >I've always had a passion for drawing and creating art, and I feel so lucky to be able to do what I love for a living.</p>
-                                <p class="animate__animated animate__fadeOutDown">I started freelancing last summer and I've been blown away by the positive response I've received from clients. It's been such a joy to work with people from all walks of life, helping them bring their visions to life through illustrations.
-                                <p class="animate__animated animate__fadeOutDown">I've had the opportunity to work on a variety of projects, from illustrating children's books to designing graphics for websites and creating custom artwork for non-profit and for-profit organizations. Each project is unique and I love the challenge of bringing something new and fresh to the table.</p>
-                                <div class="about-icons mt-4">
-                                    <div style="color: black">
-                                    <a href="https://www.instagram.com/natalitales/"><span class="iconify icon-hidden" data-icon="arcticons:instagram"></span></a>
-                                    <!--<a href="https://www.fiverr.com/natalietoot"><span class="iconify icon-hidden" data-icon="arcticons:fiverr"></span></a>-->
-                                    <a href=""><span class="iconify icon-hidden" data-icon="arcticons:freelancer-upwork"></span></a>
-                                    <a href=""><span class="iconify icon-hidden" data-icon="arcticons:youtube"></span></a>
+                                <div class="col-md-6" id="aboutText">
+                                    <h1 class="mb4">About Me</h1>
+                                    <p id="aboutText">I've always had a passion for drawing and creating art, and I feel so lucky to be able to do what I love for a living.</p>
+                                    <p id="aboutText">I started freelancing last summer and I've been blown away by the positive response I've received from clients. It's been such a joy to work with people from all walks of life, helping them bring their visions to life through illustrations.
+                                    <p id="aboutText">I've had the opportunity to work on a variety of projects, from illustrating children's books to designing graphics for websites and creating custom artwork for non-profit and for-profit organizations. Each project is unique and I love the challenge of bringing something new and fresh to the table.</p>
+                                    <div class="about-icons mt-4">
+                                        <div style="color: black">
+                                        <a href="https://www.instagram.com/natalitales/"><span class="iconify icon-hidden" data-icon="arcticons:instagram"></span></a>
+                                        <!--<a href="https://www.fiverr.com/natalietoot"><span class="iconify icon-hidden" data-icon="arcticons:fiverr"></span></a>-->
+                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:freelancer-upwork"></span></a>
+                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:youtube"></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--Project section-->
-                <div class="section fp-auto-height-responsive" id="project-sec">
-                        <div class="container justify-content-center fp">
-                            <div class="row">
-                                <div class="col mt-5 ml-5 justify-content-center">
-                                    <h1>Projects</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="mx-auto col-12 mb-2 mt-2">
-                                    <button class="button button-outline icon-hidden" data-filter="all">All</button>
-                                    <button class="button button-outline icon-hidden" data-filter="1">26 letters</button>
-                                    <button class="button button-outline icon-hidden" data-filter="5">Peachtober</button>
-                                    <button class="button button-outline icon-hidden" data-filter="2">Sketch a day</button>
-                                    <button class="button button-outline icon-hidden" data-filter="3">Illustration</button>
-                                    <button class="button button-outline icon-hidden" data-filter="4">Comics</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="w-100 mx-auto d-flex filter-container">
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
-                                            <div>
-                                              <a href="images/2023-03-11_14-00-00_UTC.jpg" data-lightbox="2023-03-11_14-00-00_UTC.jpg" data-title="T. TV Shows.">
-                                              <img src="images/2023-03-11_14-00-00_UTC.jpg" srcset="images/2023-03-11_14-00-00_UTC-482.jpeg 482w, images/2023-03-11_14-00-00_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
-                                            <div>
-                                                <a href="images/2022-07-13_23-44-40_UTC.jpg" data-lightbox="2022-07-13_23-44-40_UTC.jpg" data-title="I. Inspiration.">
-                                                <img src="images/2022-07-13_23-44-40_UTC.jpg" srcset="images/2022-07-13_23-44-40_UTC-482.jpeg 482w, images/2022-07-13_23-44-40_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                            <div>
-                                              <a href="images/2022-11-08_03-01-06_UTC.jpg" data-lightbox="2022-11-08_03-01-06_UTC.jpg">
-                                              <img src="images/2022-11-08_03-01-06_UTC.jpg" srcset="images/2022-11-08_03-01-06_UTC-482.jpeg 482w, images/2022-11-08_03-01-06_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                            <div>
-                                              <a href="images/2022-12-06_04-56-38_UTC.jpg" data-lightbox="2022-12-06_04-56-38_UTC.jpg">
-                                              <img src="images/2022-12-06_04-56-38_UTC.jpg" srcset="images/2022-12-06_04-56-38_UTC-482.jpeg 482w, images/2022-12-06_04-56-38_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                            <div>
-                                              <a href="images/2022-10-19_14-15-00_UTC_1.jpg" data-lightbox="22-10-19_14-15-00_UTC_1.jpg" data-title="Day 19. Boot">
-                                              <img src="images/2022-10-19_14-15-00_UTC_1.jpg" srcset="images/2022-10-19_14-15-00_UTC_1-482.jpeg 482w, images/2022-10-19_14-15-00_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                            <div>
-                                              <a href="images/2022-10-06_14-03-55_UTC_1.jpg" data-lightbox="22-10-06_14-03-55_UTC_1.jpg" data-title="Day 6. Trees">
-                                              <img src="images/2022-10-06_14-03-55_UTC_1.jpg" srcset="images/2022-10-06_14-03-55_UTC_1-482.jpeg 482w, images/2022-10-06_14-03-55_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                            </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                            <div>
-                                              <a href="images/2022-10-07_14-18-07_UTC_1.jpg" data-lightbox="22-10-07_14-18-07_UTC_1.jpg" data-title="Day 7. Potion">
-                                              <img src="images/2022-10-07_14-18-07_UTC_1.jpg" srcset="images/2022-10-07_14-18-07_UTC_1-482.jpeg 482w, images/2022-10-07_14-18-07_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                            </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
-                                            <div>
-                                              <a href="images/2022-09-15_03-36-25_UTC.jpg" data-lightbox="2022-09-15_03-36-25_UTC.jpg" data-title="O. Oleg.">
-                                              <img src="images/2022-09-15_03-36-25_UTC.jpg" srcset="images/2022-09-15_03-36-25_UTC-482.jpeg 482w, images/2022-09-15_03-36-25_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                            <div>
-                                              <a href="images/2022-10-01_14-33-02_UTC_1.jpg" data-lightbox="22-10-01_14-33-02_UTC_1.jpg" data-title="Day 1. Cave">
-                                              <img src="images/2022-10-01_14-33-02_UTC_1.jpg" srcset="images/2022-10-01_14-33-02_UTC_1-482.jpeg 482w, images/2022-10-01_14-33-02_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                              </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                    <a href="images/2022-06-10_22-21-01_UTC.jpeg" data-lightbox="images/2022-06-10_22-21-01_UTC.jpeg" data-title="Yes you can!">
-                                     <img src="images/2022-06-10_22-21-01_UTC.jpeg" srcset="images/2022-06-10_22-21-01_UTC.jpeg 482w, images/2022-06-10_22-21-01_UTC.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                    <a href="images/2022-06-19_23-02-55_UTC.jpg" data-lightbox="2022-06-19_23-02-55_UTC.jpg">
-                                    <img src="images/2022-06-19_23-02-55_UTC.jpg" srcset="images/2022-06-19_23-02-55_UTC.jpg 482w, images/2022-06-19_23-02-55_UTC.jpg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
-                                <div>
-                                    <a href="images/2022-06-22_23-56-22_UTC.jpg" data-lightbox="2022-06-22_23-56-22_UTC.jpg" data-title="E. Education.">
-                                    <img src="images/2022-06-22_23-56-22_UTC.jpg" srcset="images/2022-06-22_23-56-22_UTC-482.jpeg 482w, images/2022-06-22_23-56-22_UTC.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="4">
-                                <div>
-                                    <a href="images/2022-07-03_01-00-59_UTC.jpg" data-lightbox="2022-07-03_01-00-59_UTC.jpg" data-title="Intrusive thoughts">
-                                    <img src="images/2022-07-03_01-00-59_UTC.jpg" srcset="images/2022-07-03_01-00-59_UTC-482.jpeg 482w, images/2022-07-03_01-00-59_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                    <a href="images/2022-07-08_00-42-16_UTC.jpg" data-lightbox="2022-07-08_00-42-16_UTC.jpg">
-                                    <img src="images/2022-07-08_00-42-16_UTC.jpg" srcset="images/2022-07-08_00-42-16_UTC-482.jpeg 482w, images/2022-07-08_00-42-16_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
-                                <div>
-                                    <a href="images/2022-07-10_20-56-38_UTC.jpg" data-lightbox="2022-07-10_20-56-38_UTC.jpg" data-title="H. Home.">
-                                    <img src="images/2022-07-10_20-56-38_UTC.jpg" srcset="images/2022-07-10_20-56-38_UTC-482.jpeg 482w, images/2022-07-10_20-56-38_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
-                                <div>
-                                    <a href="images/2022-07-27_00-03-56_UTC.jpg" data-lightbox="2022-07-27_00-03-56_UTC.jpg" data-title="L. Life">
-                                    <img src="images/2022-07-27_00-03-56_UTC.jpg" srcset="images/2022-07-27_00-03-56_UTC-482.jpeg 482w, images/2022-07-27_00-03-56_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,3">
-                                <div>
-                                  <a href="images/2022-08-08_16-26-04_UTC.jpg" data-lightbox="2022-08-08_16-26-04_UTC.jpg" data-title="M. Music.">
-                                  <img src="images/2022-08-08_16-26-04_UTC.jpg" srcset="images/2022-08-08_16-26-04_UTC-482.jpeg 482w, images/2022-08-08_16-26-04_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4,5">
-                                <div>
-                                  <a href="images/2022-10-02_13-18-38_UTC_1.jpg" data-lightbox="22-10-02_13-18-38_UTC_1.jpg" data-title="Day 2. Dandelion">
-                                  <img src="images/2022-10-02_13-18-38_UTC_1.jpg" srcset="images/2022-10-02_13-18-38_UTC_1-482.jpeg 482w, images/2022-10-02_13-18-38_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-09_13-18-36_UTC_1.jpg" data-lightbox="22-10-09_13-18-36_UTC_1.jpg" data-title="Day 9. Boulder">
-                                  <img src="images/2022-10-09_13-18-36_UTC_1.jpg" srcset="images/2022-10-09_13-18-36_UTC_1-482.jpeg 482w, images/2022-10-09_13-18-36_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-10_13-26-04_UTC_1.jpg" data-lightbox="22-10-10_13-26-04_UTC_1.jpg" data-title="Day 10. Lantern">
-                                  <img src="images/2022-10-10_13-26-04_UTC_1.jpg" srcset="images/2022-10-10_13-26-04_UTC_1-482.jpeg 482w, images/2022-10-10_13-26-04_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-11_14-58-46_UTC_1.jpg" data-lightbox="22-10-11_14-58-46_UTC_1.jpg" data-title="Day 11. Field">
-                                  <img src="images/2022-10-11_14-58-46_UTC_1.jpg" srcset="images/2022-10-11_14-58-46_UTC_1-482.jpeg 482w, images/2022-10-11_14-58-46_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-12_14-30-51_UTC_1.jpg" data-lightbox="22-10-12_14-30-51_UTC_1.jpg" data-title="Day 12. Lava">
-                                  <img src="images/2022-10-12_14-30-51_UTC_1.jpg" srcset="images/2022-10-12_14-30-51_UTC_1-482.jpeg 482w, images/2022-10-12_14-30-51_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-14_14-34-19_UTC_1.jpg" data-lightbox="22-10-14_14-34-19_UTC_1.jpg" data-title="Day 14. Town">
-                                  <img src="images/2022-10-14_14-34-19_UTC_1.jpg" srcset="images/2022-10-14_14-34-19_UTC_1-482.jpeg 482w, images/2022-10-14_14-34-19_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
-                                <div>
-                                  <a href="images/2022-10-17_18-08-01_UTC_1.jpg" data-lightbox="22-10-17_18-08-01_UTC_1.jpg" data-title="Day 17. Snow">
-                                  <img src="images/2022-10-17_18-08-01_UTC_1.jpg" srcset="images/2022-10-17_18-08-01_UTC_1-482.jpeg 482w, images/2022-10-17_18-08-01_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
-                                <div>
-                                  <a href="images/2022-11-22_04-34-18_UTC.jpg" data-lightbox="2022-11-22_04-34-18_UTC.jpg" data-title="experimental">
-                                  <img src="images/2022-11-22_04-34-18_UTC.jpg" srcset="images/2022-11-22_04-34-18_UTC-482.jpeg 482w, images/2022-11-22_04-34-18_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
-                                <div>
-                                  <a href="images/2023-01-21_02-32-25_UTC_1.jpg" data-lightbox="23-01-21_02-32-25_UTC_1.jpg">
-                                  <img src="images/2023-01-21_02-32-25_UTC_1.jpg" srcset="images/2023-01-21_02-32-25_UTC_1-482.jpeg 482w, images/2023-01-21_02-32-25_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                  <a href="images/2023-02-20_15-01-19_UTC.jpg" data-lightbox="2023-02-20_15-01-19_UTC.jpg">
-                                  <img src="images/2023-02-20_15-01-19_UTC.jpg" srcset="images/2023-02-20_15-01-19_UTC-482.jpeg 482w, images/2023-02-20_15-01-19_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                  <a href="images/2023-02-24_19-39-25_UTC.jpg" data-lightbox="2023-02-24_19-39-25_UTC.jpg">
-                                  <img src="images/2023-02-24_19-39-25_UTC.jpg" srcset="images/2023-02-24_19-39-25_UTC-482.jpeg 482w, images/2023-02-24_19-39-25_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
-                                <div>
-                                  <a href="images/2023-02-28_13-00-00_UTC.jpg" data-lightbox="2023-02-28_13-00-00_UTC.jpg" data-title="S. Summer">
-                                  <img src="images/2023-02-28_13-00-00_UTC.jpg" srcset="images/2023-02-28_13-00-00_UTC-482.jpeg 482w, images/2023-02-28_13-00-00_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_1.jpg" data-lightbox="23-03-03_13-00-00_UTC_1.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_1.jpg" srcset="images/2023-03-03_13-00-00_UTC_1-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_2.jpg" data-lightbox="23-03-03_13-00-00_UTC_2.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_2.jpg" srcset="images/2023-03-03_13-00-00_UTC_2-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_3.jpg" data-lightbox="23-03-03_13-00-00_UTC_3.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_3.jpg" srcset="images/2023-03-03_13-00-00_UTC_3-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_3-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_4.jpg" data-lightbox="23-03-03_13-00-00_UTC_4.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_4.jpg" srcset="images/2023-03-03_13-00-00_UTC_4-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_4-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_5.jpg" data-lightbox="23-03-03_13-00-00_UTC_5.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_5.jpg" srcset="images/2023-03-03_13-00-00_UTC_5-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_5-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-03_13-00-00_UTC_6.jpg" data-lightbox="23-03-03_13-00-00_UTC_6.jpg">
-                                  <img src="images/2023-03-03_13-00-00_UTC_6.jpg" srcset="images/2023-03-03_13-00-00_UTC_6-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_6-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
-                                <div>
-                                  <a href="images/2023-03-14_02-09-53_UTC_1.jpg" data-lightbox="23-03-14_02-09-53_UTC_1.jpg">
-                                  <img src="images/2023-03-14_02-09-53_UTC_1.jpg" srcset="images/2023-03-14_02-09-53_UTC_1-482.jpeg 482w, images/2023-03-14_02-09-53_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-16_01-52-40_UTC_1.jpg" data-lightbox="23-03-16_01-52-40_UTC_1.jpg">
-                                  <img src="images/2023-03-16_01-52-40_UTC_1.jpg" srcset="images/2023-03-16_01-52-40_UTC_1-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-16_01-52-40_UTC_2.jpg" data-lightbox="23-03-16_01-52-40_UTC_2.jpg">
-                                  <img src="images/2023-03-16_01-52-40_UTC_2.jpg" srcset="images/2023-03-16_01-52-40_UTC_2-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-16_01-52-40_UTC_3.jpg" data-lightbox="23-03-16_01-52-40_UTC_3.jpg">
-                                  <img src="images/2023-03-16_01-52-40_UTC_3.jpg" srcset="images/2023-03-16_01-52-40_UTC_3-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_3-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-16_01-52-40_UTC_4.jpg" data-lightbox="23-03-16_01-52-40_UTC_4.jpg">
-                                  <img src="images/2023-03-16_01-52-40_UTC_4.jpg" srcset="images/2023-03-16_01-52-40_UTC_4-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_4-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-03-16_01-52-40_UTC_5.jpg" data-lightbox="23-03-16_01-52-40_UTC_5.jpg">
-                                  <img src="images/2023-03-16_01-52-40_UTC_5.jpg" srcset="images/2023-03-16_01-52-40_UTC_5-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_5-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-04_02-57-21_UTC_1.jpg" data-lightbox="23-04-04_02-57-21_UTC_1.jpg">
-                                  <img src="images/2023-04-04_02-57-21_UTC_1.jpg" srcset="images/2023-04-04_02-57-21_UTC_1-482.jpeg 482w, images/2023-04-04_02-57-21_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-04_02-57-21_UTC_2.jpg" data-lightbox="23-04-04_02-57-21_UTC_2.jpg">
-                                  <img src="images/2023-04-04_02-57-21_UTC_2.jpg" srcset="images/2023-04-04_02-57-21_UTC_2-482.jpeg 482w, images/2023-04-04_02-57-21_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-06_01-51-43_UTC_1.jpg" data-lightbox="23-04-06_01-51-43_UTC_1.jpg">
-                                  <img src="images/2023-04-06_01-51-43_UTC_1.jpg" srcset="images/2023-04-06_01-51-43_UTC_1-482.jpeg 482w, images/2023-04-06_01-51-43_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-06_01-51-43_UTC_2.jpg" data-lightbox="23-04-06_01-51-43_UTC_2.jpg">
-                                  <img src="images/2023-04-06_01-51-43_UTC_2.jpg" srcset="images/2023-04-06_01-51-43_UTC_2-482.jpeg 482w, images/2023-04-06_01-51-43_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                  <a href="images/2023-04-10_01-15-58_UTC_1.jpg" data-lightbox="23-04-10_01-15-58_UTC_1.jpg">
-                                  <img src="images/2023-04-10_01-15-58_UTC_1.jpg" srcset="images/2023-04-10_01-15-58_UTC_1-482.jpeg 482w, images/2023-04-10_01-15-58_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
-                                <div>
-                                  <a href="images/2023-04-10_01-15-58_UTC_2.jpg" data-lightbox="23-04-10_01-15-58_UTC_2.jpg">
-                                  <img src="images/2023-04-10_01-15-58_UTC_2.jpg" srcset="images/2023-04-10_01-15-58_UTC_2-482.jpeg 482w, images/2023-04-10_01-15-58_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-14_04-21-04_UTC_1.jpg" data-lightbox="23-04-14_04-21-04_UTC_1.jpg">
-                                  <img src="images/2023-04-14_04-21-04_UTC_1.jpg" srcset="images/2023-04-14_04-21-04_UTC_1-482.jpeg 482w, images/2023-04-14_04-21-04_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
-                                <div>
-                                  <a href="images/2023-04-14_04-21-04_UTC_2.jpg" data-lightbox="23-04-14_04-21-04_UTC_2.jpg">
-                                  <img src="images/2023-04-14_04-21-04_UTC_2.jpg" srcset="images/2023-04-14_04-21-04_UTC_2-482.jpeg 482w, images/2023-04-14_04-21-04_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
-                                  </a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                </div>
-                <!--Testimony-->
-                <div class="section fp-scrollable fp-auto-height-responsive" id="testimony-sec">
+                    <!--Testimony-->
+                <div class="slide fp-scrollable fp-auto-height-responsive" data-anchor="testimony-sec" id="testimony-sec">
                     <div class="container">
                         <div class="row">
                             <div class="col mt-5">
@@ -2025,6 +1649,377 @@
 
                         </div>
                     </div>
+                </div>
+                </div>
+                <!--Project section-->
+                <div class="section fp-auto-height-responsive" id="project-sec">
+                        <div class="container justify-content-center fp">
+                            <div class="row">
+                                <div class="col mt-5 ml-5 justify-content-center">
+                                    <h1>Projects</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mx-auto col-12 mb-2 mt-2">
+                                    <button class="button button-outline icon-hidden" data-filter="all">All</button>
+                                    <button class="button button-outline icon-hidden" data-filter="1">26 letters</button>
+                                    <button class="button button-outline icon-hidden" data-filter="5">Peachtober</button>
+                                    <button class="button button-outline icon-hidden" data-filter="2">Sketch a day</button>
+                                    <button class="button button-outline icon-hidden" data-filter="3">Illustration</button>
+                                    <button class="button button-outline icon-hidden" data-filter="4">Comics</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="w-100 mx-auto d-flex filter-container">
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
+                                            <div>
+                                              <a href="images/2023-03-11_14-00-00_UTC.jpg" data-lightbox="2023-03-11_14-00-00_UTC.jpg" data-title="T. TV Shows.">
+                                              <img src="images/2023-03-11_14-00-00_UTC.jpg" srcset="images/2023-03-11_14-00-00_UTC-482.jpeg 482w, images/2023-03-11_14-00-00_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
+                                            <div>
+                                                <a href="images/2022-07-13_23-44-40_UTC.jpg" data-lightbox="2022-07-13_23-44-40_UTC.jpg" data-title="I. Inspiration.">
+                                                <img src="images/2022-07-13_23-44-40_UTC.jpg" srcset="images/2022-07-13_23-44-40_UTC-482.jpeg 482w, images/2022-07-13_23-44-40_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                            <div>
+                                              <a href="images/2022-11-08_03-01-06_UTC.jpg" data-lightbox="2022-11-08_03-01-06_UTC.jpg">
+                                              <img src="images/2022-11-08_03-01-06_UTC.jpg" srcset="images/2022-11-08_03-01-06_UTC-482.jpeg 482w, images/2022-11-08_03-01-06_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                            <div>
+                                              <a href="images/2022-12-06_04-56-38_UTC.jpg" data-lightbox="2022-12-06_04-56-38_UTC.jpg">
+                                              <img src="images/2022-12-06_04-56-38_UTC.jpg" srcset="images/2022-12-06_04-56-38_UTC-482.jpeg 482w, images/2022-12-06_04-56-38_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                            <div>
+                                              <a href="images/2022-10-19_14-15-00_UTC_1.jpg" data-lightbox="22-10-19_14-15-00_UTC_1.jpg" data-title="Day 19. Boot">
+                                              <img src="images/2022-10-19_14-15-00_UTC_1.jpg" srcset="images/2022-10-19_14-15-00_UTC_1-482.jpeg 482w, images/2022-10-19_14-15-00_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                            <div>
+                                              <a href="images/2022-10-06_14-03-55_UTC_1.jpg" data-lightbox="22-10-06_14-03-55_UTC_1.jpg" data-title="Day 6. Trees">
+                                              <img src="images/2022-10-06_14-03-55_UTC_1.jpg" srcset="images/2022-10-06_14-03-55_UTC_1-482.jpeg 482w, images/2022-10-06_14-03-55_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                            </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                            <div>
+                                              <a href="images/2022-10-07_14-18-07_UTC_1.jpg" data-lightbox="22-10-07_14-18-07_UTC_1.jpg" data-title="Day 7. Potion">
+                                              <img src="images/2022-10-07_14-18-07_UTC_1.jpg" srcset="images/2022-10-07_14-18-07_UTC_1-482.jpeg 482w, images/2022-10-07_14-18-07_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                            </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
+                                            <div>
+                                              <a href="images/2022-09-15_03-36-25_UTC.jpg" data-lightbox="2022-09-15_03-36-25_UTC.jpg" data-title="O. Oleg.">
+                                              <img src="images/2022-09-15_03-36-25_UTC.jpg" srcset="images/2022-09-15_03-36-25_UTC-482.jpeg 482w, images/2022-09-15_03-36-25_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                            <div>
+                                              <a href="images/2022-10-01_14-33-02_UTC_1.jpg" data-lightbox="22-10-01_14-33-02_UTC_1.jpg" data-title="Day 1. Cave">
+                                              <img src="images/2022-10-01_14-33-02_UTC_1.jpg" srcset="images/2022-10-01_14-33-02_UTC_1-482.jpeg 482w, images/2022-10-01_14-33-02_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                              </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                    <a href="images/2022-06-10_22-21-01_UTC.jpeg" data-lightbox="images/2022-06-10_22-21-01_UTC.jpeg" data-title="Yes you can!">
+                                     <img src="images/2022-06-10_22-21-01_UTC.jpeg" srcset="images/2022-06-10_22-21-01_UTC.jpeg 482w, images/2022-06-10_22-21-01_UTC.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                    <a href="images/2022-06-19_23-02-55_UTC.jpg" data-lightbox="2022-06-19_23-02-55_UTC.jpg">
+                                    <img src="images/2022-06-19_23-02-55_UTC.jpg" srcset="images/2022-06-19_23-02-55_UTC.jpg 482w, images/2022-06-19_23-02-55_UTC.jpg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
+                                <div>
+                                    <a href="images/2022-06-22_23-56-22_UTC.jpg" data-lightbox="2022-06-22_23-56-22_UTC.jpg" data-title="E. Education.">
+                                    <img src="images/2022-06-22_23-56-22_UTC.jpg" srcset="images/2022-06-22_23-56-22_UTC-482.jpeg 482w, images/2022-06-22_23-56-22_UTC.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="4">
+                                <div>
+                                    <a href="images/2022-07-03_01-00-59_UTC.jpg" data-lightbox="2022-07-03_01-00-59_UTC.jpg" data-title="Intrusive thoughts">
+                                    <img src="images/2022-07-03_01-00-59_UTC.jpg" srcset="images/2022-07-03_01-00-59_UTC-482.jpeg 482w, images/2022-07-03_01-00-59_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                    <a href="images/2022-07-08_00-42-16_UTC.jpg" data-lightbox="2022-07-08_00-42-16_UTC.jpg">
+                                    <img src="images/2022-07-08_00-42-16_UTC.jpg" srcset="images/2022-07-08_00-42-16_UTC-482.jpeg 482w, images/2022-07-08_00-42-16_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
+                                <div>
+                                    <a href="images/2022-07-10_20-56-38_UTC.jpg" data-lightbox="2022-07-10_20-56-38_UTC.jpg" data-title="H. Home.">
+                                    <img src="images/2022-07-10_20-56-38_UTC.jpg" srcset="images/2022-07-10_20-56-38_UTC-482.jpeg 482w, images/2022-07-10_20-56-38_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-3 filtr-item card-wrapper" data-category="1,3">
+                                <div>
+                                    <a href="images/2022-07-27_00-03-56_UTC.jpg" data-lightbox="2022-07-27_00-03-56_UTC.jpg" data-title="L. Life">
+                                    <img src="images/2022-07-27_00-03-56_UTC.jpg" srcset="images/2022-07-27_00-03-56_UTC-482.jpeg 482w, images/2022-07-27_00-03-56_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,3">
+                                <div>
+                                  <a href="images/2022-08-08_16-26-04_UTC.jpg" data-lightbox="2022-08-08_16-26-04_UTC.jpg" data-title="M. Music.">
+                                  <img src="images/2022-08-08_16-26-04_UTC.jpg" srcset="images/2022-08-08_16-26-04_UTC-482.jpeg 482w, images/2022-08-08_16-26-04_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4,5">
+                                <div>
+                                  <a href="images/2022-10-02_13-18-38_UTC_1.jpg" data-lightbox="22-10-02_13-18-38_UTC_1.jpg" data-title="Day 2. Dandelion">
+                                  <img src="images/2022-10-02_13-18-38_UTC_1.jpg" srcset="images/2022-10-02_13-18-38_UTC_1-482.jpeg 482w, images/2022-10-02_13-18-38_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-09_13-18-36_UTC_1.jpg" data-lightbox="22-10-09_13-18-36_UTC_1.jpg" data-title="Day 9. Boulder">
+                                  <img src="images/2022-10-09_13-18-36_UTC_1.jpg" srcset="images/2022-10-09_13-18-36_UTC_1-482.jpeg 482w, images/2022-10-09_13-18-36_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-10_13-26-04_UTC_1.jpg" data-lightbox="22-10-10_13-26-04_UTC_1.jpg" data-title="Day 10. Lantern">
+                                  <img src="images/2022-10-10_13-26-04_UTC_1.jpg" srcset="images/2022-10-10_13-26-04_UTC_1-482.jpeg 482w, images/2022-10-10_13-26-04_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-11_14-58-46_UTC_1.jpg" data-lightbox="22-10-11_14-58-46_UTC_1.jpg" data-title="Day 11. Field">
+                                  <img src="images/2022-10-11_14-58-46_UTC_1.jpg" srcset="images/2022-10-11_14-58-46_UTC_1-482.jpeg 482w, images/2022-10-11_14-58-46_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-12_14-30-51_UTC_1.jpg" data-lightbox="22-10-12_14-30-51_UTC_1.jpg" data-title="Day 12. Lava">
+                                  <img src="images/2022-10-12_14-30-51_UTC_1.jpg" srcset="images/2022-10-12_14-30-51_UTC_1-482.jpeg 482w, images/2022-10-12_14-30-51_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-14_14-34-19_UTC_1.jpg" data-lightbox="22-10-14_14-34-19_UTC_1.jpg" data-title="Day 14. Town">
+                                  <img src="images/2022-10-14_14-34-19_UTC_1.jpg" srcset="images/2022-10-14_14-34-19_UTC_1-482.jpeg 482w, images/2022-10-14_14-34-19_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3,5">
+                                <div>
+                                  <a href="images/2022-10-17_18-08-01_UTC_1.jpg" data-lightbox="22-10-17_18-08-01_UTC_1.jpg" data-title="Day 17. Snow">
+                                  <img src="images/2022-10-17_18-08-01_UTC_1.jpg" srcset="images/2022-10-17_18-08-01_UTC_1-482.jpeg 482w, images/2022-10-17_18-08-01_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
+                                <div>
+                                  <a href="images/2022-11-22_04-34-18_UTC.jpg" data-lightbox="2022-11-22_04-34-18_UTC.jpg" data-title="experimental">
+                                  <img src="images/2022-11-22_04-34-18_UTC.jpg" srcset="images/2022-11-22_04-34-18_UTC-482.jpeg 482w, images/2022-11-22_04-34-18_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
+                                <div>
+                                  <a href="images/2023-01-21_02-32-25_UTC_1.jpg" data-lightbox="23-01-21_02-32-25_UTC_1.jpg">
+                                  <img src="images/2023-01-21_02-32-25_UTC_1.jpg" srcset="images/2023-01-21_02-32-25_UTC_1-482.jpeg 482w, images/2023-01-21_02-32-25_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                  <a href="images/2023-02-20_15-01-19_UTC.jpg" data-lightbox="2023-02-20_15-01-19_UTC.jpg">
+                                  <img src="images/2023-02-20_15-01-19_UTC.jpg" srcset="images/2023-02-20_15-01-19_UTC-482.jpeg 482w, images/2023-02-20_15-01-19_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                  <a href="images/2023-02-24_19-39-25_UTC.jpg" data-lightbox="2023-02-24_19-39-25_UTC.jpg">
+                                  <img src="images/2023-02-24_19-39-25_UTC.jpg" srcset="images/2023-02-24_19-39-25_UTC-482.jpeg 482w, images/2023-02-24_19-39-25_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="1,4">
+                                <div>
+                                  <a href="images/2023-02-28_13-00-00_UTC.jpg" data-lightbox="2023-02-28_13-00-00_UTC.jpg" data-title="S. Summer">
+                                  <img src="images/2023-02-28_13-00-00_UTC.jpg" srcset="images/2023-02-28_13-00-00_UTC-482.jpeg 482w, images/2023-02-28_13-00-00_UTC-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_1.jpg" data-lightbox="23-03-03_13-00-00_UTC_1.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_1.jpg" srcset="images/2023-03-03_13-00-00_UTC_1-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_2.jpg" data-lightbox="23-03-03_13-00-00_UTC_2.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_2.jpg" srcset="images/2023-03-03_13-00-00_UTC_2-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_3.jpg" data-lightbox="23-03-03_13-00-00_UTC_3.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_3.jpg" srcset="images/2023-03-03_13-00-00_UTC_3-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_3-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_4.jpg" data-lightbox="23-03-03_13-00-00_UTC_4.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_4.jpg" srcset="images/2023-03-03_13-00-00_UTC_4-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_4-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_5.jpg" data-lightbox="23-03-03_13-00-00_UTC_5.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_5.jpg" srcset="images/2023-03-03_13-00-00_UTC_5-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_5-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-03_13-00-00_UTC_6.jpg" data-lightbox="23-03-03_13-00-00_UTC_6.jpg">
+                                  <img src="images/2023-03-03_13-00-00_UTC_6.jpg" srcset="images/2023-03-03_13-00-00_UTC_6-482.jpeg 482w, images/2023-03-03_13-00-00_UTC_6-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="4">
+                                <div>
+                                  <a href="images/2023-03-14_02-09-53_UTC_1.jpg" data-lightbox="23-03-14_02-09-53_UTC_1.jpg">
+                                  <img src="images/2023-03-14_02-09-53_UTC_1.jpg" srcset="images/2023-03-14_02-09-53_UTC_1-482.jpeg 482w, images/2023-03-14_02-09-53_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-16_01-52-40_UTC_1.jpg" data-lightbox="23-03-16_01-52-40_UTC_1.jpg">
+                                  <img src="images/2023-03-16_01-52-40_UTC_1.jpg" srcset="images/2023-03-16_01-52-40_UTC_1-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-16_01-52-40_UTC_2.jpg" data-lightbox="23-03-16_01-52-40_UTC_2.jpg">
+                                  <img src="images/2023-03-16_01-52-40_UTC_2.jpg" srcset="images/2023-03-16_01-52-40_UTC_2-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-16_01-52-40_UTC_3.jpg" data-lightbox="23-03-16_01-52-40_UTC_3.jpg">
+                                  <img src="images/2023-03-16_01-52-40_UTC_3.jpg" srcset="images/2023-03-16_01-52-40_UTC_3-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_3-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-16_01-52-40_UTC_4.jpg" data-lightbox="23-03-16_01-52-40_UTC_4.jpg">
+                                  <img src="images/2023-03-16_01-52-40_UTC_4.jpg" srcset="images/2023-03-16_01-52-40_UTC_4-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_4-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-03-16_01-52-40_UTC_5.jpg" data-lightbox="23-03-16_01-52-40_UTC_5.jpg">
+                                  <img src="images/2023-03-16_01-52-40_UTC_5.jpg" srcset="images/2023-03-16_01-52-40_UTC_5-482.jpeg 482w, images/2023-03-16_01-52-40_UTC_5-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-04_02-57-21_UTC_1.jpg" data-lightbox="23-04-04_02-57-21_UTC_1.jpg">
+                                  <img src="images/2023-04-04_02-57-21_UTC_1.jpg" srcset="images/2023-04-04_02-57-21_UTC_1-482.jpeg 482w, images/2023-04-04_02-57-21_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-04_02-57-21_UTC_2.jpg" data-lightbox="23-04-04_02-57-21_UTC_2.jpg">
+                                  <img src="images/2023-04-04_02-57-21_UTC_2.jpg" srcset="images/2023-04-04_02-57-21_UTC_2-482.jpeg 482w, images/2023-04-04_02-57-21_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-06_01-51-43_UTC_1.jpg" data-lightbox="23-04-06_01-51-43_UTC_1.jpg">
+                                  <img src="images/2023-04-06_01-51-43_UTC_1.jpg" srcset="images/2023-04-06_01-51-43_UTC_1-482.jpeg 482w, images/2023-04-06_01-51-43_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-06_01-51-43_UTC_2.jpg" data-lightbox="23-04-06_01-51-43_UTC_2.jpg">
+                                  <img src="images/2023-04-06_01-51-43_UTC_2.jpg" srcset="images/2023-04-06_01-51-43_UTC_2-482.jpeg 482w, images/2023-04-06_01-51-43_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                  <a href="images/2023-04-10_01-15-58_UTC_1.jpg" data-lightbox="23-04-10_01-15-58_UTC_1.jpg">
+                                  <img src="images/2023-04-10_01-15-58_UTC_1.jpg" srcset="images/2023-04-10_01-15-58_UTC_1-482.jpeg 482w, images/2023-04-10_01-15-58_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="3">
+                                <div>
+                                  <a href="images/2023-04-10_01-15-58_UTC_2.jpg" data-lightbox="23-04-10_01-15-58_UTC_2.jpg">
+                                  <img src="images/2023-04-10_01-15-58_UTC_2.jpg" srcset="images/2023-04-10_01-15-58_UTC_2-482.jpeg 482w, images/2023-04-10_01-15-58_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-14_04-21-04_UTC_1.jpg" data-lightbox="23-04-14_04-21-04_UTC_1.jpg">
+                                  <img src="images/2023-04-14_04-21-04_UTC_1.jpg" srcset="images/2023-04-14_04-21-04_UTC_1-482.jpeg 482w, images/2023-04-14_04-21-04_UTC_1-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 filtr-item card-wrapper" data-category="2">
+                                <div>
+                                  <a href="images/2023-04-14_04-21-04_UTC_2.jpg" data-lightbox="23-04-14_04-21-04_UTC_2.jpg">
+                                  <img src="images/2023-04-14_04-21-04_UTC_2.jpg" srcset="images/2023-04-14_04-21-04_UTC_2-482.jpeg 482w, images/2023-04-14_04-21-04_UTC_2-850.jpeg 850w" sizes="(max-width:1439) 482px, (min-width:1440) 850px" class="img-fluid" alt="">
+                                  </a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
                 </div>
                 <!--Contact-->
                 <div class="section fp-auto-height-responsive" id="contact-sec">
