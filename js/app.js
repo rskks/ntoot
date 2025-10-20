@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
         sectionsColor: ['white','white','white','aliceblue','white'],
-        anchors:['home','project','testimony','contact'],
+        anchors:['home','project'],
         afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
             $('.nav__item.active').removeClass('active');
             $('.nav__item').eq(slideIndex).addClass('active');
