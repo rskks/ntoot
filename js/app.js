@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+    var headerHeight = $('#header').outerHeight(); // height in px
+
     $('#fullpage').fullpage({
         sectionsColor: ['white','white','white','aliceblue','white'],
         anchors:['home','project'],
@@ -7,11 +9,12 @@ $(document).ready(function() {
             $('.nav__item.active').removeClass('active');
             $('.nav__item').eq(slideIndex).addClass('active');
         },
-        menu:['#myMenu2','#myMenu'],
+        menu:'#myMenu',
         easing:'swing',
         touchSensitivity: 10,
-        navigation:true,
-        scrollBar: false,    
+        continuousHorizontal: true,
+        scrollBar: false,
+        paddingTop: headerHeight + '300px',   
         afterLoad: function(origin, destination, direction) {
             fullpage_api.setScrollingSpeed(700); // reset speed
             // Animation for project section
@@ -23,7 +26,7 @@ $(document).ready(function() {
                 
 }});
 
-$(document).on('click', '.nav_about', function(e) {
+$(document).on('click', '.nav_about', 'nav_contact', function(e) {
     e.preventDefault();
 
     // Step 1: Fade in overlay to cover transition flicker
@@ -86,6 +89,32 @@ $(document).on('click', '.nav_home', function(e) {
 $.fn.fullpage.setScrollingSpeed(700);
 });
 
+// Handle mobile menu link clicks
+$(document).on('click', '.mobile-menu a', function(e) {
+    e.preventDefault();
+    const target = $(this).attr('href');
+
+    // Close the mobile menu
+    $('.mobile-overlay').removeClass('mob-active');
+
+    // Small delay for slide-out animation
+    setTimeout(() => {
+        if (target.startsWith('#home')) {
+            // Handle internal slides under 'home'
+            const slideName = target.split('/')[1]; // e.g., 'abt-sec'
+            if (slideName === 'home1') {
+                fullpage_api.moveTo('home', 0);
+            } else if (slideName === 'abt-sec') {
+                fullpage_api.moveTo('home', 1);
+            } else if (slideName === 'contact-sec') {
+                fullpage_api.moveTo('home', 2);
+            }
+        } else if (target === '#project') {
+            fullpage_api.moveTo('project');
+        }
+    }, 300); // wait for overlay to slide away
+});
+
 $(document).ready(function() {
     // Fullpage initialization code goes here
     
@@ -122,7 +151,7 @@ $(document).ready(function() {
 
 var filterizr = $('.filter-container').filterizr({
     animationDuration: .5,
-    layout: 'sameSize',
+    layout: 'sameWidth',
     grid: {
       rows: 2
     }
@@ -189,9 +218,17 @@ $(document).ready(function() {
         ]
     });
 
-    //mobile menu
-    $('.burger').on('click',function(){
-        $('.overlay').toggleClass('mob-active');
-    })
+   //mobile menu
+    $('.burger').on('click', function() {
+  $('.mobile-overlay').toggleClass('mob-active');
+})
+
+$(window).resize(function() {
+        var newHeaderHeight = $('#header').outerHeight();
+        fullpage_api.setAutoScrolling(false);   // temporarily disable
+        fullpage_api.setPaddingTop(newHeaderHeight + 'px');
+        fullpage_api.setAutoScrolling(true);    // re-enable
+    });
+
 });
 
