@@ -3,7 +3,7 @@ $(document).ready(function() {
     var headerHeight = $('#header').outerHeight(); // height in px
 
     $('#fullpage').fullpage({
-        sectionsColor: ['white','black','white','white'],
+        sectionsColor: ['white','white','white','white'],
         anchors:['home','art','about','contact'],
         afterLoad: function(origin, destination){
     // remove previous active states
@@ -18,7 +18,7 @@ $(document).ready(function() {
         touchSensitivity: 10,
         continuousHorizontal: true,
         scrollBar: false,
-        paddingTop: headerHeight + '300px',   
+        paddingTop: 0,   
         afterLoad: function(origin, destination, direction) {
             fullpage_api.setScrollingSpeed(1400); // reset speed
             // Animation for art section
