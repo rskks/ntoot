@@ -8,13 +8,13 @@
         <title>Natalitales | Artist and Illustrator</title>
 
         <!-- Description -->
-        <meta name="description" content="Natalie Tutanova is a freelance artist and illustrator based in Nashville, Tennessee.">
+        <meta name="description" content="Natali Tutanova is a freelance artist and illustrator based in Nashville, Tennessee.">
 
         <!-- Keywords -->
-        <meta name="keywords" content="Natalie Tutanova, natalitales, natalietales, Artist portfolio, Freelance illustrator, Custom artwork, natalietoot, Illustration services, Visual storytelling, Digital illustration, Traditional illustration, Art commissions">
+        <meta name="keywords" content="Natali Tutanova, natalitales, natalietales, Artist portfolio, Freelance illustrator, Custom artwork, natalietoot, Illustration services, Visual storytelling, Digital illustration, Traditional illustration, Art commissions">
 
         <!-- Author -->
-        <meta name="author" content="Natalie Tutanova">
+        <meta name="author" content="Natali Tutanova">
 
         <!-- Robots -->
         <meta name="robots" content="index, follow">
@@ -23,12 +23,12 @@
         <link rel="canonical" href="https://www.natalitales.com/">
 
         <!-- Open Graph -->
-        <meta property="og:title" content="Natalietales | Natalia Tutanova | Freelance Artist and Illustrator | Nashville, Tennessee">
-        <meta property="og:description" content="Step into the whimsical world of Natalie Tutanova, a freelance artist and illustrator based in the heart of Nashville, Tennessee. Her portfolio showcases her unique style and diverse range of work.">
+        <meta property="og:title" content="Natalitales | Natali Tutanova | Freelance Artist and Illustrator | Nashville, Tennessee">
+        <meta property="og:description" content="Natalitales aka Natali Tutanova is a freelance artist and illustrator based in Nashville, Tennessee.">
         <meta property="og:url" content="https://www.natalitales.com/">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://www.natalitales.com/images/ntootOg.png">
-        <meta property="og:image:alt" content="NatalieToot logo">
+        <meta property="og:image" content="https://www.natalitales.com/assets-102025/Icon.png">
+        <meta property="og:image:alt" content="Natalitales icon">
 
         <link rel="icon" href="images/favicon.ico" type="image/gif">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -58,15 +58,29 @@
         <div id="fadeOverlay"></div>
     <header id="header">
         <div class="header-inner">
-        <div class="logo">
-            <a href="#home/home1">
-            <img src="assets-102025/Logo-nomargins.png" alt="Website Logo" id="logo-img">
-            </a>
-        </div>       
+            <ul id ="myMenu">
+                <div class="logo">
+                    <li data-menuanchor="home">
+                        <a href="#home">
+                            <img src="assets-102025/Logo-nomargins.png" alt="Website Logo" id="logo-img">
+                        </a>
+                    </li>
+                </div>
+            </ul>   
         <div class="desktop-menu">
-                <ul>
-                    <li>
-                        <a class="nav_item nav_about" href="#home/abt-sec">
+                <ul id ="myMenu">
+                    <li data-menuanchor="art">
+                        <a class="nav_item" href="#art">
+                            <img src="assets-102025/Art.png"    
+                                    srcset="assets-102025/Art.png 482w,
+                                    assets-102025/Art.png 964w,
+                                    assets-102025/Art.png 1080w,
+                                    assets-102025/Art.png 1280w"
+                                    alt="" class="btn-img">
+                        </a>
+                    </li>
+                    <li data-menuanchor="about">
+                        <a class="nav_item nav_about" href="#about">
                             <img src="assets-102025/About.png"    
                                     srcset="assets-102025/About.png 482w,
                                     assets-102025/About.png 964w,
@@ -75,23 +89,13 @@
                                     alt="" class="btn-img">
                         </a>
                     </li>
-                    <li>
-                        <a class="nav_item nav_contact" href="#home/contact-sec">
+                    <li data-menuanchor="contact">
+                        <a class="nav_item nav_contact" href="#contact">
                             <img src="assets-102025/Contact.png"    
                                     srcset="assets-102025/Contact.png 482w,
                                     assets-102025/Contact.png 964w,
                                     assets-102025/Contact.png 1080w,
                                     assets-102025/Contact.png 1280w"
-                                    alt="" class="btn-img">
-                        </a>
-                    </li>
-                    <li data-menuanchor="project">
-                        <a class="nav_item" href="#project">
-                            <img src="assets-102025/Art.png"    
-                                    srcset="assets-102025/Art.png 482w,
-                                    assets-102025/Art.png 964w,
-                                    assets-102025/Art.png 1080w,
-                                    assets-102025/Art.png 1280w"
                                     alt="" class="btn-img">
                         </a>
                     </li>
@@ -106,23 +110,23 @@
     <div class="mobile-menu">
         <div class="mobile-overlay">
             <div class="mobile-logo-img">
-                <a href="#home/home1">
+                <a href="#home">
                  <img src="assets-102025/Logo-modified.png" alt="Website Logo" id="mobile-logo-img">
                 </a>
             </div>
             <ul id="myMenu">
                     <li>
-                        <a class="nav_item nav_about" href="#home/abt-sec">
+                        <a class="nav_item nav_about" href="#about">
                             <img src="assets-102025/About-modified.png" alt="About" class="mobile-btn-image">
                         </a>
                     </li>
                     <li>
-                        <a class="nav_item" href="#project">
+                        <a class="nav_item" href="#art">
                             <img src="assets-102025/Art-modified.png" alt="Art" class="mobile-btn-image">
                         </a>
                     </li>
                     <li>
-                        <a class="nav_item nav_contact" href="#home/contact-sec">
+                        <a class="nav_item nav_contact" href="#contact">
                             <img src="assets-102025/Contact-modified.png" alt="Contact" class="mobile-btn-image">
                         </a>
                     </li>
@@ -132,12 +136,12 @@
     </div>
         <main class="main-right">
             <div id="fullpage">
-                <div class="section" id="home-sec">
-                    <div class="slide" data-anchor="home1">
-                        <div class="container justify-content-flex-between">
-                        <div class="row">
-                            <div class="d-flex align-items-center">
-                                <div class="animate__animated animate__fadeIn animate__delay-1s img-box">
+                <div class="section" data-anchor="home" id="home-sec" justify-content-space-between>
+                        <div class="row align-items-start hero-img-box">
+                            <div class="col">
+                            </div>
+                            <div class="col justify-content-right">
+                                <div class="animate__animated animate__fadeIn animate__delay-1s heromain-img-box">
                                     <img src="assets-102025/hero.png"    
                                     srcset="assets-102025/hero_2_482x482.png 482w,
                                     assets-102025/hero_1_964x964.png 964w,
@@ -146,77 +150,12 @@
                                     alt="" class="hero-img">
                                 </div>
                             </div>
+                        
                         </div>
-                    </div>
                 </div>
-                    <!-- about section-->
-                    <div class="slide" data-anchor="abt-sec" id="about-sec">
-                         <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="about-left" id="aboutImage">
-                                        <img src="assets-102025/Gingham.png" 
-                                        srcset="assets-102025/Gingham.png 256w,
-                                        assets-102025/Gingham.png 535w,
-                                        assets-102025/Gingham.png 850w,
-                                        assets-102025/Gingham.png 1080w,
-                                        assets-102025/Gingham.png 1260w,
-                                        assets-102025/Gingham.png 1420w" class="img-fluid" alt="About image">
-                                    </div>
-                                </div>
-                                <div class="col-md-6" id="aboutText">
-                                    <!--<h1 class="mb4">About Me</h1>-->
-                                    <p id="aboutText">I make art</p>
-                                    <div class="about-icons mt-4">
-                                        <div style="color: black">
-                                        <a href="https://www.instagram.com/natalitales/"><span class="iconify icon-hidden" data-icon="arcticons:instagram"></span></a>
-                                        <!--<a href="https://www.fiverr.com/natalietoot"><span class="iconify icon-hidden" data-icon="arcticons:fiverr"></span></a>-->
-                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:freelancer-upwork"></span></a>
-                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:youtube"></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Contact-->
-                    <div class="slide" data-anchor="contact-sec" id="contact-sec">
-                            <div class="container contact-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="img-box">
-                                            <div class="row">
-                                                <img src="images/whatsnext.jpg" class="img-fluid" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <h1>Contact me</h1>
-                                        </div> 
-                                        <div class="row">
-                                        <form action="https://formspree.io/f/xjvdlyre" method="POST">
-                                            <label> Email:
-                                                <input type="email" name="email" required>
-                                            </label>
-                                            <label> Message:
-                                                <textarea name="message" required></textarea>
-                                            </label>
-                                            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-                                            <p class="disclaimer">This site is protected by reCAPTCHA and the Google
-                                                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
-                                                <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-                                            <button type="submit" class="button button-outline" value="Send Message">Send</button>
-                                        </form>
-                                        </div>  
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <!--Project section-->
-                <div class="section fp-auto-height-responsive" id="project-sec">
-                        <div class="container project-box">
+                <!--Art section-->
+                <div class="section fp-auto-height-responsive" id="art-sec">
+                    <div class="row">
                             <div class="row">
                                 <div class="mx-auto col-12 mb-2 mt-2">
                                     <!--<button class="button button-outline icon-hidden" data-filter="all">All</button>
@@ -227,9 +166,8 @@
                                     <button class="button button-outline icon-hidden" data-filter="4">Comics</button>-->
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="w-100 mx-auto d-flex filter-container">
+                            <div class="row gallery">
+                                    <div class="filter-container">
                                         <div class="col-xs-4 col-sm-3 col-md-10 col-lg-3 filtr-item card-wrapper" data-category="1,4">
                                             <div>
                                               <a href="assets-102025/Critter.png" data-lightbox="assets-102025/Critter.png" data-title="C. Critter.">
@@ -293,9 +231,73 @@
                                                 </a>
                                             </div>
                                         </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- about section-->
+                <div class="section" data-anchor="about" id="about-sec">
+                         <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about-left" id="aboutImage">
+                                        <img src="assets-102025/Gingham.png" 
+                                        srcset="assets-102025/Gingham.png 256w,
+                                        assets-102025/Gingham.png 535w,
+                                        assets-102025/Gingham.png 850w,
+                                        assets-102025/Gingham.png 1080w,
+                                        assets-102025/Gingham.png 1260w,
+                                        assets-102025/Gingham.png 1420w" class="img-fluid" alt="About image">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="aboutText">
+                                    <!--<h1 class="mb4">About Me</h1>-->
+                                    <p id="aboutText">I make art</p>
+                                    <div class="about-icons mt-4">
+                                        <div style="color: black">
+                                        <a href="https://www.instagram.com/natalitales/"><span class="iconify" data-icon="arcticons:instagram"></span></a>
+                                        <!--<a href="https://www.fiverr.com/natalietoot"><span class="iconify icon-hidden" data-icon="arcticons:fiverr"></span></a>-->
+                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:freelancer-upwork"></span></a>
+                                        <a href=""><span class="iconify icon-hidden" data-icon="arcticons:huawei_email"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                        </div>
+                </div>
+                 <!--Contact-->
+                <div class="section" data-anchor="contact" id="contact-sec">
+                            <div class="container contact-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="img-box">
+                                            <div class="row">
+                                                <img src="images/whatsnext.jpg" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <h1>Contact me</h1>
+                                        </div> 
+                                        <div class="row">
+                                        <form action="https://formspree.io/f/xjvdlyre" method="POST">
+                                            <label> Email:
+                                                <input type="email" name="email" required>
+                                            </label>
+                                            <label> Message:
+                                                <textarea name="message" required></textarea>
+                                            </label>
+                                            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                                            <p class="disclaimer">This site is protected by reCAPTCHA and the Google
+                                                <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+                                                <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+                                            <button type="submit" class="button button-outline" value="Send Message">Send</button>
+                                        </form>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
                 </div>
             </div>
         </main>

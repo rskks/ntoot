@@ -110,16 +110,19 @@ body::-webkit-scrollbar{
   width: auto;
   transition: opacity 0.3s;
 }
+.logo li{
+    list-style: none;
+}
+
 .logo img:hover {
   opacity: 0.8;
+  transform: scaleX(1.1);
 }
 
 /* Menu */
 .desktop-menu ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .desktop-menu li {
@@ -127,48 +130,31 @@ body::-webkit-scrollbar{
 }
 
 .desktop-menu a {
-  display: inline-block;
-  text-decoration: none;
   position: relative;
 }
 
 /* Button images (responsive) */
 .btn-img {
-  height: 6vh;
+  height: 8vh;
   width: auto;
   transition: opacity 0.3s;
 }
 
 .desktop-menu a:hover .btn-img {
   opacity: 0.8;
+  transform: scale(1.2);
+}
+.desktop-menu li.active .btn-img {
+    opacity: 0.8;
+    transform: scale(1.4);
 }
 
-/* Hover underline effect */
-.desktop-menu a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background-color: transparent;
-  transition: background-color 0.3s;
-}
-
-.desktop-menu a:hover::after {
-  background-color: #000;
-}
-
-/* Active state */
-.desktop-menu a.active::after {
-  background-color: #000;
-}
-
-
-#fp-nav ul li a span {
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 50%;
+/* Home */
+#home-sec .hero-img-box{
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
 }
 /* About */
 #about-sec .container {
@@ -199,6 +185,7 @@ body::-webkit-scrollbar{
     max-width: 500px;
 }
 
+
 .img-box{
     position: relative;
 }
@@ -213,50 +200,60 @@ body::-webkit-scrollbar{
     z-index: -1;
 }
 
-/* projects */
+/* art */
 
-#project-sec .project-box{
-    width: 100%;
+#art-sec .art-box{
+    width: 100vw;
 }
-#project-sec .card-wrapper{
+#art-sec .card-wrapper{
     padding: 15px;
     flex: 0 0 auto;
     margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
 
 }
 
-#project-sec .card-wrapper:hover img{
+#art-sec .card-wrapper:hover img{
     transform: scale(1.1);
 }
 
-#project-sec .button {
+#art-sec .button {
     background-color: transparent;
     color: black;
     border-color: black;
     font-family: 'Sora', sans-serif;
 }
 
-#project-sec .pressed-down{
+#art-sec .pressed-down{
     background-color: black;
     color: whitesmoke;
     border-color: whitesmoke;
     font-family: 'Sora', sans-serif;
 }
-#project-sec .button-outline:hover button{
+#art-sec .button-outline:hover button{
     background-color: black;
     color:aliceblue;
 }
-#project-sec .filter-container {
-    max-width: 1200px;
-    padding: 50px 20px;
-    margin: 0 auto;
+#art-sec .filter-container {
+    max-width: 95vw;
+    padding: 50px;
+    margin: 10px auto;
     white-space: nowrap;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250 px;
+    grid-auto-rows: 250px;
     grid-auto-flow: dense;
     grid-gap: 20px;
+    background-color: black;
 }
+#art-sec .row-gallery{
+    margin: 10px auto;
+    white-space: nowrap;
+}
+
+
+
  /* .my-custom-scrollbar {
     position: relative;
     width: 800px;
@@ -264,9 +261,6 @@ body::-webkit-scrollbar{
     overflow: auto;
   } */
 
-#project-sec .filtr-item {
-    margin-right: 16px; /* Add some space between gallery items */
-  }
 
 /* Testimony */
 
