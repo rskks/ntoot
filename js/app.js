@@ -3,8 +3,8 @@ $(document).ready(function() {
     var headerHeight = $('#header').outerHeight(); // height in px
 
     $('#fullpage').fullpage({
-        sectionsColor: ['white','white','white','white'],
-        anchors:['home','art','about','contact'],
+        sectionsColor: ['#f5f5f5','white','#f5f5f5','white'],
+        anchors:['art','projects','about','contact'],
         afterLoad: function(origin, destination){
     // remove previous active states
     $('.desktop-menu li').removeClass('active');
@@ -12,9 +12,9 @@ $(document).ready(function() {
     $('.desktop-menu li[data-menuanchor="' + destination.anchor + '"]').addClass('active');
   },
         menu:'#myMenu',
-        responsiveWidth: 760,
+        responsiveWidth: 2000,
         easingcss3:'ease',
-        scrollingSpeed:2000,
+        scrollingSpeed:1000,
         touchSensitivity: 10,
         continuousHorizontal: true,
         scrollBar: false,

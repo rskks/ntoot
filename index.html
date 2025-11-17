@@ -60,9 +60,9 @@
         <div class="header-inner">
             
                 <div class="logo">
-                    <li data-menuanchor="home">
-                        <a href="#home">
-                            <img src="assets-102025/Logo-nomargins.png" alt="Website Logo" id="logo-img">
+                    <li data-menuanchor="art">
+                        <a href="#art">
+                            <img src="assets-102025/logo-v2-nomargins.png" alt="Website Logo" id="logo-img">
                         </a>
                     </li>
                 </div>
@@ -75,6 +75,16 @@
                                     srcset="assets-102025/Art.png 482w,
                                     assets-102025/Art.png 964w,
                                     assets-102025/Art.png 1080w,
+                                    assets-102025/Art.png 1280w"
+                                    alt="" class="btn-img">
+                        </a>
+                    </li>
+                    <li data-menuanchor="projects">
+                        <a class="nav_item" href="#projects">
+                            <img src="assets-102025/Projects.png"    
+                                    srcset="assets-102025/Projects.png 482w,
+                                    assets-102025/Projects.png 964w,
+                                    assets-102025/Projects.png 1080w,
                                     assets-102025/Art.png 1280w"
                                     alt="" class="btn-img">
                         </a>
@@ -98,9 +108,21 @@
                                     assets-102025/Contact.png 1280w"
                                     alt="" class="btn-img">
                         </a>
-                    </li>
+                    </li> 
+                
+                <div class="insta">
+                    <a href="https://www.instagram.com/natalitales/">
+                        <img src="assets-102025/instagram.png"    
+                                        srcset="assets-102025/instagram.png 482w,
+                                        assets-102025/instagram.png 964w,
+                                        assets-102025/instagram.png 1080w,
+                                        assets-102025/instagram.png 1280w"
+                                        alt="" class="btn-img">
+                    </a>
+                </div>
                 </ul>
-            </div>
+        </div>
+        
         </div>
     </div>
     <div class="burger">
@@ -110,19 +132,24 @@
     <div class="mobile-menu">
         <div class="mobile-overlay">
             <div class="mobile-logo-img">
-                <a href="#home">
+                <a href="#art">
                  <img src="assets-102025/Logo-modified.png" alt="Website Logo" id="mobile-logo-img">
                 </a>
             </div>
             <ul id="myMenu">
                     <li>
-                        <a class="nav_item nav_about" href="#about">
-                            <img src="assets-102025/About-modified.png" alt="About" class="mobile-btn-image">
+                        <a class="nav_item" href="#art">
+                            <img src="assets-102025/Art-modified.png" alt="Art" class="mobile-btn-image">
                         </a>
                     </li>
                     <li>
-                        <a class="nav_item" href="#art">
-                            <img src="assets-102025/Art-modified.png" alt="Art" class="mobile-btn-image">
+                        <a class="nav_item" href="#projects">
+                            <img src="assets-102025/Projects-modified.png" alt="Projects" class="mobile-btn-image">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav_item nav_about" href="#about">
+                            <img src="assets-102025/About-modified.png" alt="About" class="mobile-btn-image">
                         </a>
                     </li>
                     <li>
@@ -136,26 +163,11 @@
     </div>
         <main class="main-right">
             <div id="fullpage">
-                <div class="section" data-anchor="home" id="home-sec" justify-content-space-between>
-                        <div class="row g-0 hero-img-box">
-                            <div class="col">
-                            </div>
-                            <div class="col justify-content-right padding-right-0">
-                                <div class="animate__animated animate__fadeIn animate__delay-1s heromain-img-box">
-                                    <img src="assets-102025/hero.png"    
-                                    srcset="assets-102025/hero_2_482x482.png 482w,
-                                    assets-102025/hero_1_964x964.png 964w,
-                                    assets-102025/hero_1080x1080.png 1080w,
-                                    assets-102025/hero.png 1280w"
-                                    alt="" class="hero-img">
-                                </div>
-                            </div>
-                        
-                        </div>
-                </div>
                 <!--Art section-->
-                <div class="section fp-auto-height-responsive" id="art-sec">
+                <div class="section fp-auto-height" id="art-sec">
                     <div class="row">
+                            <div class="row header-space"> 
+                            </div>
                             <div class="row">
                                 <div class="mx-auto col-12 mb-2 mt-2">
                                     <!--<button class="button button-outline icon-hidden" data-filter="all">All</button>
@@ -240,6 +252,59 @@
                             <div class="col-1"></div>
                     </div>
                 </div>
+                <!-- Projects section-->
+                <div class="section" data-anchor="projects" id="projects-sec">
+                    <div class="container projects-grid">
+                        <!-- Project item -->
+                        <div class="project-card" data-micromodal-trigger="modal-1">
+                        <img src="images/project1-thumb.jpg" alt="Project 1">
+                        <h3>Project 1</h3>
+                        <p>Short description of project 1</p>
+                        </div>
+                        <div class="project-card" data-micromodal-trigger="modal-2">
+                        <img src="images/project2-thumb.jpg" alt="Project 2">
+                        <h3>Project 2</h3>
+                        <p>Short description of project 2</p>
+                        </div>
+                        <!-- Repeat for other projects -->
+                    </div>
+                    </div>
+
+                    <!-- Modal Templates -->
+                    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                        <header class="modal__header">
+                            <h2 id="modal-1-title">Project 1</h2>
+                            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                        </header>
+                        <main class="modal__content">
+                            <div class="siema">
+                            <div><img src="images/project1-1.jpg" alt=""></div>
+                            <div><img src="images/project1-2.jpg" alt=""></div>
+                            <div><img src="images/project1-3.jpg" alt=""></div>
+                            </div>
+                        </main>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+                    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+                        <header class="modal__header">
+                            <h2 id="modal-2-title">Project 2</h2>
+                            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                        </header>
+                        <main class="modal__content">
+                            <div class="siema">
+                            <div><img src="images/project2-1.jpg" alt=""></div>
+                            <div><img src="images/project2-2.jpg" alt=""></div>
+                            </div>
+                        </main>
+                        </div>
+                    </div>
+                    </div>
                 <!-- about section-->
                 <div class="section" data-anchor="about" id="about-sec">
                          <div class="container">
@@ -281,23 +346,90 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <h1>Contact me</h1>
+                                    <div class="col-md-6 contact-right-column">
+                                        <div class="row contact-right" id="contactImage">
+                                            <img src="assets-102025/contact me.png" 
+                                        srcset="assets-102025/contact me.png 256w,
+                                        assets-102025/contact me.png 535w,
+                                        assets-102025/contact me.png 850w,
+                                        assets-102025/contact me.png 1080w,
+                                        assets-102025/contact me.png 1260w,
+                                        assets-102025/contact me.png 1420w" class="contactImage">
+                                            </img>
                                         </div> 
-                                        <div class="row">
+                                        <div class="row contact-social" id="contact-social">
+                                            <div class="col-md-2">
+                                                <a href="https://www.instagram.com/natalitales/" class="contact-social-buttons">
+                                                <img src="assets-102025/instagram.png"    
+                                                        srcset="assets-102025/instagram.png 482w,
+                                                        assets-102025/instagram.png 964w,
+                                                        assets-102025/instagram.png 1080w,
+                                                        assets-102025/instagram.png 1280w"
+                                                        alt="" class="btn-img contact-insta-img">
+                                            </a>
+                                            </div>
+                                            <div class="col-md-2">
+                                            <img src="assets-102025/or.png" class="contact-social-or"    
+                                                        srcset="assets-102025/or.png 482w,
+                                                        assets-102025/or.png 964w,
+                                                        assets-102025/or.png 1080w,
+                                                        assets-102025/or.png 1280w"
+                                                        class="orimg">
+                                            </img>
+                                            </div>
+                                            <div class="col-md-2">
+                                            <a href="emailto:nkhomichenko@gmail.com" class="contact-social-buttons">
+                                                <img src="assets-102025/email.png"    
+                                                        srcset="assets-102025/email.png 482w,
+                                                        assets-102025/email.png 964w,
+                                                        assets-102025/email.png 1080w,
+                                                        assets-102025/email.png 1280w"
+                                                        alt="" class="btn-img contact-email-img">
+                                            </a>
+                                            </div>
+                                            <!--<a href="https://www.fiverr.com/natalietoot" class="button button-outline icon-hidden contact-fiverr-btn">
+                                                <img src="assets-102025/fiverr.png"    
+                                                        srcset="assets-102025/fiverr.png 482w,
+                                                        assets-102025/fiverr.png 964w,
+                                                        assets-102025/fiverr.png 1080w,
+                                                        assets-102025/fiverr.png 1280w"
+                                                        alt="" class="btn-img contact-fiverr-img">
+                                                Fiverr
+                                            </a>-->
+                                        <div class="row justify-content-center">
                                         <form action="https://formspree.io/f/xjvdlyre" method="POST">
-                                            <label> Email:
+                                            <div class="row justify-content-center">
+                                                <img src="assets-102025/your email.png"    
+                                                        srcset="assets-102025/your email.png 482w,
+                                                        assets-102025/your email.png 964w,
+                                                        assets-102025/your email.png 1080w,
+                                                        assets-102025/your email.png 1280w"
+                                                        alt="" class="contact-title-img">
                                                 <input type="email" name="email" required>
-                                            </label>
-                                            <label> Message:
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <img src="assets-102025/message.png"    
+                                                        srcset="assets-102025/message.png 482w,
+                                                        assets-102025/message.png 964w,
+                                                        assets-102025/message.png 1080w,
+                                                        assets-102025/message.png 1280w"
+                                                        alt="" class="contact-title-img">
                                                 <textarea name="message" required></textarea>
-                                            </label>
                                             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                                            </div>
                                             <p class="disclaimer">This site is protected by reCAPTCHA and the Google
                                                 <a href="https://policies.google.com/privacy">Privacy Policy</a> and
                                                 <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
-                                            <button type="submit" class="button button-outline" value="Send Message">Send</button>
+                                            <div class="row justify-content-center">
+                                            <button type="submit" class="contact-send-img" value="Send Message">
+                                                <img src="assets-102025/send.png"
+                                                    srcset="assets-102025/send.png 482w,
+                                                            assets-102025/send.png 964w,
+                                                            assets-102025/send.png 1080w,
+                                                            assets-102025/send.png 1280w"
+                                                    alt="" class="contact-send-img">
+                                            </button>
+                                            </div>
                                         </form>
                                         </div>  
                                     </div>
@@ -314,5 +446,32 @@
         <script src="lib/jquery.filterizr.min.js"></script>
         <script src="lib/slick.min.js"></script>
         <script src="lib/lightbox.min.js"></script>
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+        <script src="siema.min.js"></script>
+
+<script>
+  // Initialize Micromodal
+  MicroModal.init({
+    disableScroll: true,
+    awaitOpenAnimation: true,
+    awaitCloseAnimation: true
+  });
+
+  // Initialize Siema for each modal when opened
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const modalId = card.getAttribute('data-micromodal-trigger');
+      const siemaContainer = document.querySelector(`#${modalId} .siema`);
+      if (siemaContainer && !siemaContainer.siemaInstance) {
+        siemaContainer.siemaInstance = new Siema({
+          selector: siemaContainer,
+          duration: 300,
+          loop: true
+        });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

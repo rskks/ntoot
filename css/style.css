@@ -21,12 +21,7 @@ h3{
 p{
     font-family: 'Sora', sans-serif;
 }
-.btn-prime{
-    background: olivedrab !important;
-    font-weight: bold;
-    font-family: 'Sora', sans-serif;
-    color:aliceblue;
-}
+
 
 .iconify {
     vertical-align: middle;
@@ -92,13 +87,14 @@ body::-webkit-scrollbar{
   top: 0;
   left: 0;
   width: 100%;
-  height: 13vh;
+  height: 10vh;
   background: white;
   z-index: 100;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .header-inner {
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,9 +104,9 @@ body::-webkit-scrollbar{
 
 /* Logo */
 .logo img {
-  height: 11vh;
+  height: 8vh;
   width: auto;
-  transition: opacity 0.3s;
+  transition: opacity 1.1;
 }
 .logo li{
     list-style: none;
@@ -118,26 +114,28 @@ body::-webkit-scrollbar{
 
 .logo img:hover {
   opacity: 0.8;
-  transform: scaleX(1.1);
+  /*transform: scaleX(1.1);*/
 }
 
 /* Menu */
 .desktop-menu ul {
   display: flex;
+  padding: 10px;
+  margin: 0;
   list-style: none;
 }
 
-.desktop-menu li {
-  margin-left: 30px;
-}
 
 .desktop-menu a {
   position: relative;
 }
 
+
 /* Button images (responsive) */
+
+
 .btn-img {
-  height: 10vh;
+  height: 9vh;
   width: auto;
   transition: opacity 0.3s;
 }
@@ -215,6 +213,11 @@ body::-webkit-scrollbar{
 /* showcase */
 
 /* art */
+
+#art-sec .header-space {
+    height: 11vh;
+}
+
 #art-sec{
     background-image: url(assets-102025/background-1.png);
 }
@@ -252,8 +255,8 @@ body::-webkit-scrollbar{
     color:aliceblue;
 }
 #art-sec .filter-container {
-  background-color: black;
-  border-right: 20px solid black;
+  background-color: #f5f5f5;
+  border-right: 20px solid #f5f5f5;
 }
 
 #art-sec .row-galler{
@@ -266,6 +269,39 @@ body::-webkit-scrollbar{
     overflow: auto;
   } */
 
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.project-card {
+  cursor: pointer;
+  background: #fff;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Micromodal overrides for clean minimal look */
+.modal__container {
+  max-width: 800px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.modal__content img {
+  width: 100%;
+  display: block;
+}
 
 /* Testimony */
 
@@ -337,7 +373,6 @@ body::-webkit-scrollbar{
     margin-bottom: 8%;
 }
 
-
 .form-control{
     padding: 5px 0;
     font-family: 'Sora', sans-serif;
@@ -354,35 +389,85 @@ input[type="text"]{
     font-size: medium;
     background-color: white;
 }
-label{
-    font-family: 'Sora', sans-serif;
+
+.contact-right{
+    padding: auto;
+    margin-top: 10vh;
+        width: auto;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    height: 15vh;
 }
-#contact-sec .button {
-    background-color: transparent;
-    color: black;
-    border-color: black;
-    font-family: 'Sora', sans-serif;
+.contactImage{
+    height: 100%;
+    width: auto;
+    padding: 20px;
 }
 
 #contact-sec .pressed-down{
     background-color: black;
     color: whitesmoke;
-    border-color: whitesmoke;
+    border-color: black;
     font-family: 'Sora', sans-serif;
+}
+
+.contact-right-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contact-sec .img-box{
     height: 110%;
     width: 110%;
 }
+.contact-social-or{
+    height: 5vh;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contact-social{
+    justify-content: center;
+    align-items: center;
+}
+.contact-title-img{
+    height: 9vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+.contact-send-img{
+    height: 9vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
 
+.contact-send-img:hover{
+    transform: skewX(5deg);
+}
 
 .disclaimer{
     font-size: xx-small;
     font-family: 'Sora', sans-serif;
     margin-bottom: 3px;
 }
+button[type="submit"]:hover {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+}
 
+button[type="submit"] {
+    transition: transform 0.1s ease;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.94);
+}
 /* Default: desktop header visible, mobile menu hidden */
 .mobile-menu {
   display: none;
